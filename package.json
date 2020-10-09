@@ -1,0 +1,40 @@
+{
+  "name": "vscode-highlight-comments",
+  "version": "0.0.1",
+  "description": "text highlighter for comments.",
+  "publisher": "gaojr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gaojr/vscode-highlight-comments.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gaojr/vscode-highlight-comments/issues"
+  },
+  "categories": ["Other"],
+  "main": "out/extension.js",
+  "activationEvents": ["*"],
+  "contributes": {},
+  "scripts": {
+    "package": "vsce package",
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext .ts",
+    "fix": "eslint --fix src --ext .ts",
+    "format": "prettier --write \"{*.{json,md},src/*.{ts}}\""
+  },
+  "devDependencies": {
+    "vsce": "^1.75.0",
+    "@types/vscode": "^1.44.0",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "2.0.5",
+    "typescript": "^3.8.3"
+  },
+  "engines": {
+    "vscode": "^1.44.0"
+  },
+  "license": "MPL-2.0"
+}

@@ -1,0 +1,7 @@
+import * as vscode from 'vscode';
+
+function activate(context: vscode.ExtensionContext): void {
+  // todo
+}
+
+export { activate };
