@@ -1,6 +1,5 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/git,node,vscode
-# Edit at https://www.toptal.com/developers/gitignore?templates=git,node,vscode
+# Created by https://www.toptal.com/developers/gitignore/api/git,node,vscode,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,node,vscode,visualstudiocode
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -128,7 +127,7 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-### vscode ###
+### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -136,4 +135,12 @@ dist
 !.vscode/extensions.json
 *.code-workspace
 
-# End of https://www.toptal.com/developers/gitignore/api/git,node,vscode
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+### vscode ###
+out/
+
+# End of https://www.toptal.com/developers/gitignore/api/git,node,vscode,visualstudiocode
