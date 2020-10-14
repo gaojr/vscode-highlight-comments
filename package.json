@@ -13,17 +13,41 @@
   "categories": ["Other"],
   "main": "out/extension.js",
   "activationEvents": ["*"],
-  "contributes": {},
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "%highlight-comments.configuration.title%",
+      "properties": {
+        "highlight-comments.config": {
+          "type": "object",
+          "description": "%highlight-comments.config%",
+          "default": [
+            {
+              "keyword": "todo",
+              "color": "#FFA500"
+            },
+            {
+              "keyword": "fixme",
+              "color": "#FF0000"
+            }
+          ]
+        }
+      }
+    }
+  },
   "scripts": {
     "package": "vsce package",
-    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
+    "debug": "npm install && tsc -p ./",
     "lint": "eslint src --ext .ts",
     "fix": "eslint --fix src --ext .ts",
-    "format": "prettier --write \"{*.{json,md},src/*.{ts}}\""
+    "format": "prettier --write \"{*.{json,md},src/*.ts}\""
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
-    "vsce": "^1.75.0",
+    "@types/lodash": "^4.14.162",
     "@types/vscode": "^1.44.0",
     "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^2.29.0",
@@ -31,7 +55,8 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
     "prettier": "2.0.5",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "vsce": "^1.75.0"
   },
   "engines": {
     "vscode": "^1.44.0"
