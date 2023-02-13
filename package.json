@@ -10,9 +10,13 @@
   "bugs": {
     "url": "https://github.com/gaojr/vscode-highlight-comments/issues"
   },
-  "categories": ["Other"],
+  "categories": [
+    "Other"
+  ],
   "main": "out/extension.js",
-  "activationEvents": ["*"],
+  "activationEvents": [
+    "*"
+  ],
   "contributes": {
     "configuration": {
       "type": "object",
@@ -44,9 +48,11 @@
     "format": "prettier --write \"{*.{json,md},src/*.ts}\""
   },
   "dependencies": {
+    "color-string": "^1.5.4",
     "lodash": "^4.17.20"
   },
   "devDependencies": {
+    "@types/color-string": "^1.5.0",
     "@types/lodash": "^4.14.162",
     "@types/vscode": "^1.44.0",
     "@typescript-eslint/eslint-plugin": "^2.29.0",
